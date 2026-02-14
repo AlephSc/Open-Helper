@@ -144,6 +144,3 @@ function chand()
 	FindPath(L0_1, L0_2)
 end
 
--- [\ Hook
-AddHook(function (type, a)
-
