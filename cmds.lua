@@ -702,21 +702,6 @@ if a:find("/cdc (%d+)") then
     return true
 end
 
-AddHook(function(var)
-    if var.v1 ~= "OnTalkBubble" then return end
-
-    -- Deteksi bubble SPIN SYSTEM
-    if var.v3:find("spun the wheel and got") then
-        SendVariant({
-            v1 = "OnTalkBubble",
-            v2 = var.v2,
-            v3 = "`w[ `2REAL `w] " .. var.v3,
-            v4 = 0
-        })
-        return true
-    end
-end, "OnVariant")
-
 
 	
 -- [ Dialog
